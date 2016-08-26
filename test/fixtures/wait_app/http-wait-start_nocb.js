@@ -9,7 +9,6 @@ var app = http.createServer(function(req, res) {
 
 var listener = app.listen(0, function() {
   console.log('Listening on port ' + listener.address().port);
-  process.send({type: 'ready', data : true});
 });
 
 process.on('message', function(msg) {
